@@ -1,0 +1,240 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions name="MonService" targetNamespace="http://www.hp.com/mobicore/services/mon" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" xmlns:tns="http://www.hp.com/mobicore/services/mon" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xts="http://www.hp.com/mobicore/xfmf/mon">
+  <wsdl:types>
+<xs:schema elementFormDefault="unqualified" targetNamespace="http://www.hp.com/mobicore/services/mon" version="1.0" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" xmlns:tns="http://www.hp.com/mobicore/services/mon" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xts="http://www.hp.com/mobicore/xfmf/mon">
+			<xs:import namespace="http://www.hp.com/mobicore/xfmf/mon" schemaLocation="http://polosbmix01-test:8081/PspProxy/mon/Monitoring?xsd=jv-mon.xsd" />
+			<xs:element name="getComponentInfo">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="request" type="xts:getInfoRequestType" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getComponentInfoResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="response" type="xts:getInfoResponseType" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ping">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="request" type="xts:pingRequestType" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="pingResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="response" type="xts:pingResponseType" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="statisticsTurnOn">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="request" type="xts:statisticsTurnOnRequestType" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="statisticsTurnOnResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="response" type="xts:statisticsTurnOnResponseType" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="statisticsTurnOff">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="request" type="xts:statisticsTurnOffRequestType" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="statisticsTurnOffResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="response" type="xts:statisticsTurnOffResponseType" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="statisticsClear">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="request" type="xts:statisticsClearRequestType" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="statisticsClearResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="response" type="xts:statisticsClearResponseType" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="statisticsRetrieve">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="request" type="xts:statisticsRetrieveRequestType" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="statisticsRetrieveResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="response" type="xts:statisticsRetrieveResponseType" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+
+		</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="statisticsClear">
+    <wsdl:part element="tns:statisticsClear" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getComponentInfoResponse">
+    <wsdl:part element="tns:getComponentInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="pingResponse">
+    <wsdl:part element="tns:pingResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="statisticsTurnOnResponse">
+    <wsdl:part element="tns:statisticsTurnOnResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="statisticsClearResponse">
+    <wsdl:part element="tns:statisticsClearResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="statisticsRetrieve">
+    <wsdl:part element="tns:statisticsRetrieve" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="statisticsRetrieveResponse">
+    <wsdl:part element="tns:statisticsRetrieveResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="statisticsTurnOn">
+    <wsdl:part element="tns:statisticsTurnOn" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getComponentInfo">
+    <wsdl:part element="tns:getComponentInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ping">
+    <wsdl:part element="tns:ping" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="statisticsTurnOff">
+    <wsdl:part element="tns:statisticsTurnOff" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="statisticsTurnOffResponse">
+    <wsdl:part element="tns:statisticsTurnOffResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="Mon">
+    <wsdl:operation name="getComponentInfo">
+      <wsdl:input message="tns:getComponentInfo" name="getComponentInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:getComponentInfoResponse" name="getComponentInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ping">
+      <wsdl:input message="tns:ping" name="ping">
+    </wsdl:input>
+      <wsdl:output message="tns:pingResponse" name="pingResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="statisticsTurnOn">
+      <wsdl:input message="tns:statisticsTurnOn" name="statisticsTurnOn">
+    </wsdl:input>
+      <wsdl:output message="tns:statisticsTurnOnResponse" name="statisticsTurnOnResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="statisticsTurnOff">
+      <wsdl:input message="tns:statisticsTurnOff" name="statisticsTurnOff">
+    </wsdl:input>
+      <wsdl:output message="tns:statisticsTurnOffResponse" name="statisticsTurnOffResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="statisticsClear">
+      <wsdl:input message="tns:statisticsClear" name="statisticsClear">
+    </wsdl:input>
+      <wsdl:output message="tns:statisticsClearResponse" name="statisticsClearResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="statisticsRetrieve">
+      <wsdl:input message="tns:statisticsRetrieve" name="statisticsRetrieve">
+    </wsdl:input>
+      <wsdl:output message="tns:statisticsRetrieveResponse" name="statisticsRetrieveResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MonSoapBinding" type="tns:Mon">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getComponentInfo">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getComponentInfo">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getComponentInfoResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ping">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="ping">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="pingResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="statisticsTurnOn">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="statisticsTurnOn">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="statisticsTurnOnResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="statisticsTurnOff">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="statisticsTurnOff">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="statisticsTurnOffResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="statisticsClear">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="statisticsClear">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="statisticsClearResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="statisticsRetrieve">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="statisticsRetrieve">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="statisticsRetrieveResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MonService">
+    <wsdl:port binding="tns:MonSoapBinding" name="Mon">
+      <soap:address location="http://polosbmix01-test:8081/PspProxy/mon/Monitoring" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
